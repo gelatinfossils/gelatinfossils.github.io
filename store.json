@@ -1,1 +1,11 @@
-test
+{
+    "name": "John Doe",
+    "age": 30,
+    "address": {
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "Anystate",
+        "zip": "12345"
+    },
+    "hobbies": ["reading", "coding", "hiking"]
+}
