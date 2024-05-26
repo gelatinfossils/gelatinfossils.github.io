@@ -22,12 +22,49 @@
         .section:hover {
             transform: scale(1.1);
         }
+
+        /* Hamburger menu styles */
+        #menu-toggle {
+            display: none;
+        }
+
+        #menu-toggle:checked ~ .menu {
+            transform: translateX(0);
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background: #333;
+            transform: translateX(-200px);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .menu a {
+            display: block;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <header>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle">
+            <span>&#9776;</span> <!-- Hamburger icon -->
+        </label>
         <h1>Welcome to My Stylish Page</h1>
     </header>
+    <div class="menu">
+        <a href="#page1">Page 1</a>
+        <a href="#page2">Page 2</a>
+        <a href="#page3">Page 3</a>
+        <!-- Add more links as needed -->
+    </div>
     <main>
         <section class="section">
             <h2>About Me</h2>
@@ -35,15 +72,3 @@
         </section>
         <section class="section">
             <h2>My Hobbies</h2>
-            <ul>
-                <li>Reading</li>
-                <li>Coding</li>
-                <li>Hiking</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2022 John Doe</p>
-    </footer>
-</body>
-</html>
