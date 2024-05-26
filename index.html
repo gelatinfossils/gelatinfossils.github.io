@@ -5,17 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stylish Page</title>
     <link rel="stylesheet" href="style/style.css">
+    <style>
+        /* Add some cool animations */
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Add a cool background image */
+        body {
+            background-image: url("images/background.jpg");
+            background-size: cover;
+        }
+        
+        /* Add some cool hover effects */
+        .section:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Welcome to My Stylish Page</h1>
     </header>
     <main>
-        <section>
+        <section class="section">
             <h2>About Me</h2>
             <p>Hello! I'm John Doe, a web developer from Anytown, Anystate. I love coding and hiking.</p>
         </section>
-        <section>
+        <section class="section">
             <h2>My Hobbies</h2>
             <ul>
                 <li>Reading</li>
@@ -25,7 +43,7 @@
         </section>
     </main>
     <footer>
-        <p>Copyright &copy; 2022 John Doe</p>
+        <p>&copy; 2022 John Doe</p>
     </footer>
 </body>
 </html>
